@@ -1,0 +1,10 @@
+.navbar {
+  font-size: 2em;
+  width: 100%;
+  background-color: #ffeea9;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  padding: 30px;
+  color: black;
+  box-shadow: 0 0 10px rgb(0, 0, 0, 0.5);
+}
