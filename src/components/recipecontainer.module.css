@@ -4,15 +4,56 @@
   padding: 10px;
   height: auto;
   border-radius: 4px;
+  background-color: #f3f7ec;
 }
-.imageContainer {
-  border: 5px;
+.recipeImage {
+  max-width: 100%;
   height: auto;
-  box-shadow: 0 4px 6px rgb(0, 0, 0, 0.5);
+  border-radius: 5px;
+  margin: 10px 20px;
+  padding: 10px;
 }
 .recipetitle {
-  color: #fdaf7b;
+  color: #f4a261;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-size: 25px;
+}
+.preperationTitle {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  margin-left: 0;
+  padding: 0 25px;
+}
+.servingTitle {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 25px;
+}
+.vegitarianTitle {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 0 25px;
+}
+.recipoeInstructions {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  margin-top: 10px;
+  padding: 15px;
+}
+.instructionsContainer {
+  margin-top: 15px;
+  padding: 10px;
+  font-family: sans-serif;
+  font-size: 16px;
+  text-align: justify;
+}
+.instructionsTitle {
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px;
 }
