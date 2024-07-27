@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "./recipecontainer.module.css";
+import Ingredients from "./Ingredients.jsx";
 
 export default function RecipeDetails({ recipeId }) {
   const [recipeDetails, setrecipeDetails] = useState({});
@@ -21,7 +22,6 @@ export default function RecipeDetails({ recipeId }) {
 
   return (
     <div>
-      Recipe Details {recipeId}
       <div className={styles.recipecontainer}>
         <h1 className={styles.recipetitle}>{recipeDetails.title}</h1>
         <img className={styles.recipeImage} src={recipeDetails.image} alt="" />
@@ -29,23 +29,30 @@ export default function RecipeDetails({ recipeId }) {
         <div className={styles.recipeInstructions}>
           <div>
             <span className={styles.preperationTitle}>
-              Preparation Time: {recipeDetails.readyInMinutes} minutes
+              <strong>
+                Preparation Time: {recipeDetails.readyInMinutes} minutes
+              </strong>
             </span>
             <span className={styles.servingTitle}>
-              Servings : {recipeDetails.servings}
+              <strong>Servings : {recipeDetails.servings}</strong>
             </span>
             <span className={styles.vegitarianTitle}>
-              Vegitarian :{" "}
-              {recipeDetails.vegetarian ? "Vegetarian" : "Non- Vegetarian"}
+              <strong>
+                Vegetarian :{" "}
+                {recipeDetails.vegetarian ? "Vegetarian" : "Non- Vegetarian"}
+              </strong>
             </span>
           </div>
+          <Ingredients recipeDetails={recipeDetails} isLoading={isLoading} />
           <div className={styles.instructionsContainer}>
             <span className={styles.instructionsTitle}>Instructions</span>
-            {isLoading
-              ? "Loading..."
-              : recipeDetails.analyzedInstructions[0].steps.map((step) => (
-                  <li>{step.step}</li>
-                ))}
+            <ol>
+              {isLoading
+                ? "Loading..."
+                : recipeDetails.analyzedInstructions[0].steps.map((step) => (
+                    <li>{step.step}</li>
+                  ))}
+            </ol>
           </div>
         </div>
       </div>
