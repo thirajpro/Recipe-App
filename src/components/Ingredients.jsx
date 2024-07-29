@@ -15,8 +15,9 @@ export default function Ingredients({ recipeDetails, isLoading }) {
                   alt=""
                 />
                 <div className={styles.itemDetails}>
+                  <span>{item.name}: </span>
                   <span>
-                    {item.name}: {item.amount} {item.unit}
+                    {item.amount} {item.unit}
                   </span>
                 </div>
               </div>
